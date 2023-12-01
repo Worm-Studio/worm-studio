@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORM - Design Agency in Northampton, United Kingdom - Graphic Design, Web Development and Digital Marketing specialists</title>
     <meta name="description" content="At WORM we specialise in Graphic Design, Web Development, SEO and Digital Marketing. We're here to help your business flourish within the digital landscape" />
+    <meta name="keywords" contents="WORM, WORM Studio, Northampton, Web Design, Website Design, Web Development, Website Development, Digital Marketing, SEO, Graphic Design, Illustration, Social Media">
     <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png"/>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=montserrat:100,300,500,700,800" rel="stylesheet" />
@@ -36,6 +37,16 @@
       </script>
 </head>
 <body class="font-primary border-primary border-[10px]">
+    <div id="cookie-bar" class="flex fixed bottom-2 md:bottom-4 bg-purple-700 p-3 sm:px-6 sm:py-5 left-1/2 translate-x-[-50%] text-xs w-11/12 md:w-8/12 justify-between">
+        <div class="w-9/12 md:hidden">
+            <p class="text-white"><span class="text-primary">WORM</span> Cookies - To view our cookies policy or to manage cookie usage - please click <a class="text-primary inline" href="/cookie-policy">here</a></p>
+        </div>
+        <div class="w-9/12 hidden md:block">
+            <p class="text-white"><span class="text-primary">WORM</span> Cookies - We do use some cookies for analytical purposes.</p>
+            <p class="text-white">To view our cookies policy or to manage cookie usage - please click <a class="text-primary inline" href="/cookie-policy">here</a></p>
+        </div>
+        <button id="cookie-button" class="border border-white border-solid p-2 text-white w-3/12 ml-10 animate-pulse" onclick="setSessionAndHideCookieBar(event)">OK</button>
+    </div>
     <main>
         <nav class="pt-6 pb-0 bg-blue-600 sm:py-8">
             <div class="sm:flex w-11/12 mx-auto container lg:max-w-5l">
@@ -43,10 +54,10 @@
     
                 <ul class="pt-8 justify-between ml-auto flex sm:pt-0 sm:justify-normal">
                     <li class="mx-auto sm:mx-0 flex items-center">
-                        <a href="#what-we-do" class="text-white text-xl sm:text-2xl hover:text-primary">What we do</a>
+                        <a href="#what-we-do" class="text-white text-xl sm:text-xl hover:text-primary">What we do</a>
                     </li>
                     <li class="mx-auto sm:mx-0 flex items-center sm:ml-20">
-                        <a href="#get-in-touch" class="text-white text-xl sm:text-2xl hover:text-primary">Get in touch</a>
+                        <a href="#get-in-touch" class="text-white text-xl sm:text-xl hover:text-primary">Get in touch</a>
                     </li>
                 </ul>
             </div>
@@ -149,9 +160,16 @@
                 </ul>
             </div>
         </footer>
-        <div class="text-xs mx-auto container lg:max-w-5l sm:w-11/12 sm:mx-auto">
+        <div class="text-xs mx-auto container lg:max-w-5l sm:w-11/12 sm:mx-auto flex">
             &copy; Worm Studio 2023
+            
+            <ul class="ml-auto">
+                <li>
+                    <a class="" href="/cookie-policy">Cookie Policy</a>
+                </li>
+            </ul>
         </div>
     </main>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
