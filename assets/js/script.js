@@ -33,7 +33,7 @@ function turnCookiesOn(e) {
 }
 
 // Toggles the cookies on/off button on cookie policy page
-if (window.location.pathname === 'cookie-policy') {
+if (window.location.pathname === '/cookie-policy') {
     if (!sessionStorage.getItem('enablecookies')) {
         document.getElementById('cookies-on-button').classList.add('hidden')
     } else {
