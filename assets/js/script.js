@@ -1,4 +1,11 @@
 sessionStorage.setItem("enablecookies", true);
+
+if (window.location.pathname === '/') {
+    setTimeout(() => {
+        window.history.pushState('/', '/', '/') 
+    }, 30000);
+}
+
 // OnClick function to hide cookie bar
 function setSessionAndHideCookieBar(e) {
     e.preventDefault();
@@ -18,6 +25,7 @@ function turnCookiesOff(e) {
 
     document.getElementById('cookies-off-button').classList.add('hidden')
     document.getElementById('cookies-on-button').classList.remove('hidden')
+    document.getElementById('cookie-bar').classList.add('hidden')
 
     sessionStorage.setItem("enablecookies", false);
 }
@@ -28,6 +36,7 @@ function turnCookiesOn(e) {
 
     document.getElementById('cookies-on-button').classList.add('hidden')
     document.getElementById('cookies-off-button').classList.remove('hidden')
+    document.getElementById('cookie-bar').classList.add('hidden')
 
     sessionStorage.setItem("enablecookies", true);
 }
