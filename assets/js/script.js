@@ -1,10 +1,15 @@
 sessionStorage.setItem("enablecookies", true);
 
-if (window.location.pathname === '/') {
-    setTimeout(() => {
-        window.history.pushState('/', '/', '/') 
-    }, 30000);
+function scrollToAnchorPoint(anchorpoint) {
+    window.location.href=anchorpoint;
+    
+    if (window.location.pathname === '/') {
+        setTimeout(() => {
+            window.history.pushState('/', '/', '/') 
+        }, 30000);
+    }
 }
+
 
 // OnClick function to hide cookie bar
 function setSessionAndHideCookieBar(e) {
